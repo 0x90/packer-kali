@@ -26,6 +26,10 @@ Vagrant.configure("2") do |config|
     kali.vm.provider "vmware_fusion" do |vmware|
       vmware.gui = true
     end
+
+    kali.vm.provider :parallels do |parallels|
+      parallels.gui = true
+    end
   end
 
 end
