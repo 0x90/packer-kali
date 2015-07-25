@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Change our debian version because Kali's default doesn't work with the Omnibus installer
 echo "7.4" > /etc/debian_version
 
