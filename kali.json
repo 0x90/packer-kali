@@ -2,20 +2,20 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-        "boot_command": [
-          "<esc><wait>",
-          "install ", 
-	  "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ",
-	  "debian-installer=en_US auto locale=en_US kbd-chooser/method=us <wait>",
-          "netcfg/get_hostname={{ .Name }} ",
-	  "netcfg/get_domain=vagrantup.com ",
-	  "fb=false debconf/frontend=noninteractive ",
-	  "console-setup/ask_detect=false <wait>", 
-  	  "console-keymaps-at/keymap=us ",
-	  "keyboard-configuration/xkb-keymap=us <wait>",
-          "<enter><wait10><wait10><wait10>",
-          "<enter><wait>"
-        ],
+      "boot_command": [
+        "<esc><wait>",
+        "install ",
+	    "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ",
+	    "debian-installer=en_US auto locale=en_US kbd-chooser/method=us <wait>",
+        "netcfg/get_hostname={{ .Name }} ",
+	    "netcfg/get_domain=vagrantup.com ",
+	    "fb=false debconf/frontend=noninteractive ",
+	    "console-setup/ask_detect=false <wait>",
+  	    "console-keymaps-at/keymap=us ",
+	    "keyboard-configuration/xkb-keymap=us <wait>",
+        "<enter><wait10><wait10><wait10>",
+        "<enter><wait>"
+      ],
       "boot_wait": "10s",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "guest_os_type": "Debian_64",
@@ -70,10 +70,10 @@
       "scripts": [
         "scripts/base.sh",
         "scripts/vmtools.sh",
-	"scripts/vagrant.sh",
-	"scripts/ruby.sh",
-	"scripts/chef.sh",
-	"scripts/network.sh"
+        "scripts/vagrant.sh",
+        "scripts/ruby.sh",
+        "scripts/chef.sh",
+        "scripts/network.sh"
       ]
     },
     {
@@ -89,7 +89,7 @@
         "scripts/software.sh",
         "scripts/metasploit.sh",
         "scripts/cleanup.sh",
-	"scripts/zerodisk.sh"
+	    "scripts/zerodisk.sh"
       ]
     }
   ],
@@ -103,8 +103,8 @@
   "post-processors": [
     {
       "type": "vagrant",
-	"output" : "Kali_{{.Provider}}_{{isotime}}.box",
-	"keep_input_artifact": true
+	  "output" : "Kali_{{.Provider}}_{{isotime}}.box",
+	  "keep_input_artifact": true
     }
   ]
 }
