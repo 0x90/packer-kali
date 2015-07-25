@@ -1,6 +1,6 @@
 packer-kali
 ===========
-A Kali 1.0.9a build for Packer
+A Kali 1.1.0a build for Packer
 
 ## Requirements
 * Packer
@@ -8,11 +8,11 @@ A Kali 1.0.9a build for Packer
 * Virtualbox and/or VMware
 
 ## About the Boxes
-We start with a Kali 1.0.9a x64 base .iso and run a few scripts on it before creating a vagrant compatible .box for Virtualbox and/or VMware.
+We start with a Kali 1.1.0a x64 base .iso and run a few scripts on it before creating a vagrant compatible .box for Virtualbox and/or VMware.
 
 Final box available on Vagrantcloud at: https://vagrantcloud.com/cmad/
 
-#### Kali linux 1.0.9a
+#### Kali linux 1.1.0a
  - apt-get update/upgrade on November 13 2014.
  - Installs virtualbox guest additions / vmware-tools.
  - apt-get installation of 'chef' for provisioning.
