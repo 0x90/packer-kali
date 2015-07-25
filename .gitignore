@@ -1,12 +1,13 @@
-# SublimeText
+### SublimeText
 *.sublime-workspace
 
-# TextMate
+### TextMate
 *.tmproj
 *.tmproject
 tmtags
 
-# OS X
+### OS X
+*~
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -14,9 +15,18 @@ Icon
 ._*
 .Spotlight-V100
 .Trashes
-
-*.box
 *_cache
-.vagrant
 output-*
 RAVELLO
+
+### JetBrains IDE
+.idea/
+
+### Vagrant
+.vagrant/
+
+### Packer
+# Cache objects
+packer_cache/
+# For built boxes
+*.box
