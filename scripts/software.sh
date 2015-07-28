@@ -7,6 +7,7 @@ set -e
 
 # Untar the file Packer uploaded for us
 #tar zxf /tmp/add-ons.tar.gz -C /usr/lib/iceweasel/browser/extensions
+sudo su
 
 apt-get install -y git
 
