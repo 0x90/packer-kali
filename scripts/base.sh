@@ -16,8 +16,7 @@ which=news
 EOL
 
 # Update
-apt-get -y update
-apt-get -y upgrade
+apt-get -y update && apt-get -y upgrade
 
 # Have to run dist-upgrade with these options to get around the new libssl update that requires user input.
 # DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confnew" dist-upgrade

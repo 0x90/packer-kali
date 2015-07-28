@@ -1,21 +1,6 @@
 #!/bin/sh
 set -e
 
-# Adding THA hosts as required by labs.
-
-cat >>/etc/hosts <<EOL
-127.0.1.1	bt.foo.org	bt
-172.16.189.100	csrf.tha	csrf
-172.16.189.100	flash.tha	flash
-172.16.189.100	xss.tha		xss
-172.16.189.100	drupal6.tha	drupal6
-172.16.189.100	joomla15.tha	joomla15
-172.16.189.100	joomla10.tha	joomla10
-172.16.189.100	mail.tha	mail
-172.16.189.100	webbrute.tha	webbrute
-172.16.189.100	sqli.tha	sqli
-EOL
-
 # Test for VMware
 # When launching the VM for the first time VMware will create the VMnet but eth1 doesn't get an ip until restarting the interface
 # We do this at every boot simply to make shit work right the first time a user loads the VM.

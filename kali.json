@@ -35,8 +35,8 @@
     },
     {
       "type": "vmware-iso",
-	"boot_command": [
-	  "<esc><esc><enter><wait>",
+	  "boot_command": [
+	  "<esc><esc><esc><wait>",
 	  "/install/vmlinuz noapic ",
 	  "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ",
 	  "debian-installer=en_US auto locale=en_US kbd-chooser/method=us <wait>",
@@ -76,17 +76,17 @@
         "scripts/network.sh"
       ]
     },
-    {
-      "type": "file",
-      "source": "assets/",
-      "destination": "/tmp"
-    },
+//    {
+//      "type": "file",
+//      "source": "assets/",
+//      "destination": "/tmp"
+//    },
     {
       "type": "shell",
       "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'",
       "scripts": [
-        "scripts/apache.sh",
-        "scripts/software.sh",
+//        "scripts/apache.sh",
+//        "scripts/software.sh",
         "scripts/metasploit.sh",
         "scripts/cleanup.sh",
 	    "scripts/zerodisk.sh"
@@ -98,7 +98,7 @@
     "https_proxy": "{{env `https_proxy`}}",
     "no_proxy": "{{env `no_proxy`}}",
     "iso_checksum": "2b8d2db20e2709c5e9e0f9f9bbd8606c9b9e729f",
-    "iso_url": "http://cdimage.kali.org/kali-1.1.0a/kali-linux-1.1.0a-amd64.iso"
+    "iso_url": "file:///Users/090h/Downloads/kali-linux-1.1.0a-amd64/kali-linux-1.1.0a-amd64.iso"
   },
   "post-processors": [
     {

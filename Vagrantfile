@@ -15,20 +15,25 @@ Vagrant.configure("2") do |config|
       vb.gui = true
     end
 
-    kali.vm.provider "vmware_workstation" do |vmware|
-      vmware.gui = true
+    kali.vm.provider "vmware_workstation" do |vmw|
+      vmw.gui = true
     end
 
-    kali.vm.provider "vmware_desktop" do |vmware|
-      vmware.gui = true
+    kali.vm.provider "vmware_desktop" do |vmd|
+      vmd.gui = true
     end
     
-    kali.vm.provider "vmware_fusion" do |vmware|
-      vmware.gui = true
+    kali.vm.provider "vmware_fusion" do |vmf|
+      vmf.gui = true
     end
 
     kali.vm.provider :parallels do |parallels|
       parallels.gui = true
+    end
+
+    kali.vm.provider "docker" do |docker|
+      docker.gui = true
+      docker.name = 'kali'
     end
   end
 
